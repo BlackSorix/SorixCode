@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Formulario de Química Sanguínea</title>
+
+    <link href="images/logo.svg" rel="icon" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img alt="Logo" class="d-inline-block align-text-top" height="30" src="images/logo.svg"
+             width="30">
+        <span class="business-label">Clínica Universidad Surcolombiana</span>
+    </a>
+
+</nav>
+
+<div class="hero-block bg-light p-5">
+    <div class="hero-container d-flex flex-column">
+        <h1 class="hero-title">Interpretación de resultados sanguíneos</h1>
+        <h2 class="hero-subtitle">Análisis profesional de los resultados de los exámenes de glucosa,
+            colesterol y otros marcadores sanguíneos para la detección temprana y control de condiciones
+            médicas. Servicio proporcionado por la Clínica Universidad Surcolombiana.</h2>
+    </div>
+</div>
+
+<form class="border p-5 rounded shadow" id="blood-chemistry-form">
+    <!-- Patient Information Section -->
+    <div class="form-section">
+        <h3 class="section-title">Información del Paciente</h3>
+        <div class="form-divider"></div>
+        <div class="row">
+            <!-- Left column on wide screens -->
+            <div class="col-md-6">
+                <!-- No. de Orden -->
+                <div class="mb-3">
+                    <label class="form-label" for="orderNumber">No. de Orden</label>
+                    <input class="form-control" id="orderNumber" name="orderNumber" placeholder="2150022" required>
+                </div>
+
+                <!-- Usuario -->
+                <div class="mb-3">
+                    <label class="form-label" for="usuario">Usuario</label>
+                    <input class="form-control" id="usuario" name="usuario" placeholder="Alice Smith" required>
+                </div>
+
+                <!-- Documento Id -->
+                <div class="mb-3">
+                    <label class="form-label" for="documentId">Documento Id</label>
+                    <input class="form-control" id="documentId" name="documentId" placeholder="123456789" required>
+                </div>
+
+                <!-- Médico -->
+                <div class="mb-3">
+                    <label class="form-label" for="medico">Médico</label>
+                    <input class="form-control" id="medico" name="medico" placeholder="Dr. John Doe" required>
+                </div>
+
+                <!-- Fec. Ingreso -->
+                <div class="mb-3">
+                    <label class="form-label" for="ingreso">Fec. Ingreso</label>
+                    <input class="form-control" id="ingreso" name="ingreso" required type="date">
+                </div>
+            </div>
+
+            <!-- Right column on wide screens -->
+            <div class="col-md-6">
+                <!-- Edad -->
+                <div class="mb-3">
+                    <label class="form-label" for="edad">Edad</label>
+                    <input class="form-control" id="edad" name="edad" placeholder="28" required type="number">
+                </div>
+
+                <!-- Fec. Nacimiento -->
+                <div class="mb-3">
+                    <label class="form-label" for="fecNacimiento">Fec. Nacimiento</label>
+                    <input class="form-control" id="fecNacimiento" name="fecNacimiento" required type="date">
+                </div>
+
+                <!-- Teléfono -->
+                <div class="mb-3">
+                    <label class="form-label" for="telefono">Teléfono</label>
+                    <input class="form-control" id="telefono" name="telefono" placeholder="3123456700" required
+                           type="number">
+                </div>
+
+                <!-- Empresa -->
+                <div class="mb-3">
+                    <label class="form-label" for="empresa">Empresa</label>
+                    <input class="form-control" id="empresa" name="empresa" placeholder="Universidad Surcolombiana"
+                           required>
+                </div>
+
+                <!-- Fec. Emisión -->
+                <div class="mb-3">
+                    <label class="form-label" for="emision">Fec. Emisión</label>
+                    <input class="form-control" id="emision" name="emision" required type="date">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blood Chemistry Section -->
+    <div class="form-section">
+        <h3 class="section-title">Resultados Sanguíneos</h3>
+        <div class="form-divider"></div>
+
+        <div class="row">
+            <!-- Left column -->
+            <div class="col-md-6">
+                <!-- Glucosa en Ayunas -->
+                <div class="mb-3">
+                    <label class="form-label" for="glucosa">Glucosa en Ayunas (mg/dL)</label>
+                    <input class="form-control" id="glucosa" name="glucosa" placeholder="0" required type="number">
+                    <div class="form-text">Valores de referencia: Normal < 110 mg/dL</div>
+                </div>
+
+                <!-- Colesterol Total -->
+                <div class="mb-3">
+                    <label class="form-label" for="colesterol-total">Colesterol Total (mg/dL)</label>
+                    <input class="form-control" id="colesterol-total" name="colesterol-total" placeholder="0" required
+                           type="number">
+                    <div class="form-text">Valores de referencia: Normal < 200 mg/dL</div>
+                </div>
+
+                <!-- Colesterol HDL -->
+                <div class="mb-3">
+                    <label class="form-label" for="colesterol-hdl">Colesterol HDL (mg/dL)</label>
+                    <input class="form-control" id="colesterol-hdl" name="colesterol-hdl" placeholder="0" required
+                           type="number">
+                    <div class="form-text">Valores de referencia: Bajo < 40 mg/dL, Alto > 60 mg/dL</div>
+                </div>
+                <!-- Colesterol LDL -->
+                <div class="mb-3">
+                    <label class="form-label" for="colesterol-ldl">Colesterol LDL (mg/dL)</label>
+                    <input class="form-control" id="colesterol-ldl" name="colesterol-ldl" placeholder="0" required
+                           type="number">
+                    <div class="form-text">Valores de referencia: Óptimo < 100 mg/dL</div>
+                </div>
+            </div>
+
+            <!-- Right column -->
+            <div class="col-md-6">
+                <!-- Colesterol VLDL -->
+                <div class="mb-3">
+                    <label class="form-label" for="colesterol-vldl">Colesterol VLDL (mg/dL)</label>
+                    <input class="form-control" id="colesterol-vldl" name="colesterol-vldl" placeholder="0" required
+                           type="number">
+                    <div class="form-text">Valores de referencia: 2 - 30 mg/dL</div>
+                </div>
+
+                <!-- Triglicéridos -->
+                <div class="mb-3">
+                    <label class="form-label" for="trigliceridos">Triglicéridos (mg/dL)</label>
+                    <input class="form-control" id="trigliceridos" name="trigliceridos" placeholder="0" required
+                           type="number">
+                    <div class="form-text">Valores de referencia: 0.00 - 150.00 mg/dL</div>
+                </div>
+
+                <!-- Antígeno Prostático Específico (PSA) -->
+                <div class="mb-3">
+                    <label class="form-label" for="psa">Antígeno Prostático Específico (ng/mL)</label>
+                    <input class="form-control" id="psa" name="psa" placeholder="0" required type="number">
+                    <div class="form-text">Valores de referencia: 0.00 - 6.5 ng/ml</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="btn btn-primary w-25 mt-4 btn-analyze" id="analyze-btn" type="submit">Analizar</button>
+</form>
+
+<section class="footer">
+    <div class="container-2">
+        <div class="footer-wrapper">
+            <div class="footer-block">
+                <img alt="bussiness logo"
+                     class="footer-logo"
+                     loading="lazy"
+                     src="./images/logo.svg">
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-block">
+                    <div class="title-small">Universidad Surcolombiana</div>
+                    <a class="footer-link" href="#">Cómo funciona</a>
+                    <a class="footer-link" href="#">Precios</a>
+                    <a class="footer-link" href="#">Documentos</a>
+                </div>
+                <div class="footer-block">
+                    <div class="title-small">Recursos</div>
+                    <a class="footer-link" href="#">Laboratorios</a>
+                    <a class="footer-link" href="#">Bienestar Universitario</a>
+                    <a class="footer-link" href="#">Actividad física, deporte y recreación</a>
+                    <a class="footer-link" href="https://medlineplus.gov/spanish/ency/article/003468.htm">Más recursos &gt;</a>
+                </div>
+                <div class="footer-block">
+                    <div class="title-small">Sobre nosotros</div>
+                    <a class="footer-link" href="#">Términos y Condiciones</a>
+                    <a class="footer-link" href="#">Política de privacidad</a>
+                    <div class="footer-social-block"><a class="footer-social-link " href="#">
+                        <img alt=""
+                             loading="lazy"
+                             src="https://cdn.prod.website-files.com/62434fa732124a0fb112aab4/62434fa732124ac15112aad5_twitter%20small.svg"></a><a
+                            class="footer-social-link " href="#">
+                        <img alt=""
+                             loading="lazy"
+                             src="https://cdn.prod.website-files.com/62434fa732124a0fb112aab4/62434fa732124a389912aad8_linkedin%20small.svg"></a><a
+                            class="footer-social-link " href="#">
+                        <img alt=""
+                             loading="lazy"
+                             src="https://cdn.prod.website-files.com/62434fa732124a0fb112aab4/62434fa732124a51bf12aae9_facebook%20small.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-copyright-center">Copyright © 2025 Universidad Surcolombiana</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="resultsValidator.js"></script>
+</body>
+</html>
